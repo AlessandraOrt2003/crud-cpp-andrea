@@ -1,0 +1,35 @@
+# Query: 
+# ContextLines: 1
+
+INICIO
+  cargar productos desde archivo
+  MIENTRAS (opción != salir)
+    mostrar menú
+    LEER opción
+
+    SI opción == crear producto
+      pedir nombre, precio, stock
+      asignar ID único
+      agregar producto al vector
+
+    SI opción == listar productos
+      mostrar todos los productos del vector
+
+    SI opción == buscar productos con precio menor al promedio
+      calcular promedio de precios
+      mostrar productos con precio < promedio
+
+    SI opción == actualizar producto
+      pedir ID del producto
+      buscar producto en vector
+      si encontrado, pedir nuevos datos y actualizar
+
+    SI opción == eliminar producto
+      pedir ID del producto
+      buscar y eliminar producto del vector
+
+    SI opción == salir
+      guardar productos en archivo
+      terminar programa
+  FIN MIENTRAS
+FIN
